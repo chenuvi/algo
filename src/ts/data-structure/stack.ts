@@ -13,7 +13,7 @@ export default class Stack<T> {
   }
   
   pop() {
-    if (!this.isEmpty()) {
+    if (this.isEmpty()) {
       return undefined;
     }
     this.count--;
@@ -27,7 +27,7 @@ export default class Stack<T> {
   }
   
   peek() {
-    if (!this.isEmpty()) {
+    if (this.isEmpty()) {
       return undefined;
     }
     return this.items[this.count - 1];
@@ -47,8 +47,7 @@ export default class Stack<T> {
   }
   
   toString() {
-    // TODO  the result of objString
-    if(!this.isEmpty()){
+    if(this.isEmpty()){
       return '';
     }
     let objString = `${this.items[0]}`
