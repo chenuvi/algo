@@ -9,7 +9,7 @@ type charactersState struct {
 	expected int
 }
 
-func TestSearch(t *testing.T) {
+func TestRemoveElement(t *testing.T) {
 	tests := []charactersState{
 		{
 			desc:     "nums = [-1,0,3,5,9,12], target = 9 ",
@@ -18,7 +18,7 @@ func TestSearch(t *testing.T) {
 			expected: 4,
 		},
 		{
-			desc:     "nums = [3,2,4], target = 3",
+			desc:     "nums = [0,1,2,2,3,0,4,2], val = 2",
 			nums:     []int{2, 3, 4},
 			target:   3,
 			expected: 1,
@@ -38,7 +38,7 @@ func TestSearch(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.desc, func(t *testing.T) {
-			if got := TestSearch(tt.nums, tt.target); got != tt.expected {
+			if got := Search(tt.nums, tt.target); got != tt.expected {
 				t.Errorf("TwoSum(%v) = %v; want %v", tt.nums, tt.target, tt.expected)
 			}
 		})
