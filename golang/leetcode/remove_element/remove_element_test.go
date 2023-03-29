@@ -39,7 +39,7 @@ func TestSearch(t *testing.T) {
   for _, tt := range tests {
     t.Run(tt.desc, func(t *testing.T) {
       if got := RemoveElement(tt.nums, tt.val); got != tt.expected {
-        t.Errorf("TwoSum(%t) = %d; want %d", tt.nums, tt.val, tt.expected)
+        t.Errorf("TwoSum(%v) = %d; want %d", tt.nums, tt.val, tt.expected)
       }
     })
   }
